@@ -4,6 +4,7 @@ public class Estudiante {
     private int num_Cuenta;
     private int edad;
     private int genero;
+    private String sex;
     private int facultad;
     private String n_Facultad;
     private Carrera carrera;
@@ -60,6 +61,11 @@ public class Estudiante {
 
     public void setGenero(int genero) {
         this.genero = genero;
+        if(genero==0){
+            sex="Masculino";
+        }else{
+            sex="Femenino";
+        }
     }
 
     public int getFacultad() {
@@ -88,7 +94,7 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        return "Estudiante{" + "nombre=" + nombre + ", apellido=" + apellido + ", num_Cuenta=" + num_Cuenta + ", edad=" + edad + ", genero=" + genero + ", facultad=" + facultad + ", n_Facultad=" + n_Facultad + ", carrera=" + carrera + '}';
+        return "Estudiante{" + "nombre=" + nombre + ", apellido=" + apellido + ", num_Cuenta=" + num_Cuenta + ", edad=" + edad + ", genero=" + sex + ", facultad=" + facultad + ", n_Facultad=" + n_Facultad + ", carrera=" + carrera + '}';
     }
     
     
